@@ -4,8 +4,8 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1 class="entry-title"><?php the_title(); ?></h1>
-	<?php the_content(); ?>
+<article id="post-<?php the_ID(); ?>" class="entry">
+	<h1 class="entry__title"><?php the_title(); ?></h1>
+	<div class="entry__description"><?php the_content(); ?></div>
 
 </article><!-- #post-## -->
