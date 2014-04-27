@@ -1,71 +1,43 @@
-# [Roots Theme](http://roots.io/)
+_s
+===
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
+My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
-* Source: [https://github.com/roots/roots](https://github.com/roots/roots)
-* Home Page: [http://roots.io/](http://roots.io/)
-* Twitter: [@retlehs](https://twitter.com/retlehs)
-* Newsletter: [Subscribe](http://roots.io/subscribe/)
-* Forum: [http://discourse.roots.io/](http://discourse.roots.io/)
+* A just right amount of lean, well-commented, modern, HTML5 templates.
+* A helpful 404 template.
+* A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in functions.php and adding the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
+* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
+* Some small tweaks in `inc/extras.php` that can improve your theming experience.
+* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
+* 2 sample CSS layouts in `layouts` for a sidebar on either side of your content.
+* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
+* Licensed under GPLv2 or later. :) Use it to make something cool.
 
-## Installation
+Getting Started
+---------------
 
-Clone the git repo - `git clone git://github.com/roots/roots.git` - or [download it](https://github.com/roots/roots/zipball/master) and then rename the directory to the name of your theme or website. [Install Grunt](http://gruntjs.com/getting-started), and then install the dependencies for Roots contained in `package.json` by running the following from the Roots theme directory:
+If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
 
-```
-npm install
-```
+If you want to set things up manually, download `_s` from github. The first thing you want to do is copy the `_s` directory and change the name to something else - Like, say, `megatherium` - then you'll need to do a five-step find and replace on the name in all the templates.
 
-Reference the [theme activation](http://roots.io/roots-101/#theme-activation) documentation to understand everything that happens once you activate Roots.
+1. Search for `'_s'` (inside single quotations) to capture the text domain.
+2. Search for `_s_` to capture all the function names.
+3. Search for `Text Domain: _s` in style.css.
+4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
+5. Search for `_s-` to capture prefixed handles.
 
-## Theme Development
+OR
 
-After you've installed Grunt and ran `npm install` from the theme root, use `grunt watch` to watch for updates to your LESS and JS files and Grunt will automatically re-build as you write your code.
+* Search for: `'_s'` and replace with: `'megatherium'`
+* Search for: `_s_` and replace with: `megatherium_`
+* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
+* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
+* Search for: `_s-` and replace with: `megatherium-`
 
-## Configuration
+Then, update the stylesheet header in style.css and the links in footer.php with your own information. Next, update or delete this readme.
 
-Edit `lib/config.php` to enable or disable support for various theme functions and to define constants that are used throughout the theme.
+Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
-Edit `lib/init.php` to setup custom navigation menus and post thumbnail sizes.
-
-## Documentation
-
-### [Roots Docs](http://roots.io/docs/)
-
-* [Roots 101](http://roots.io/roots-101/) — A guide to installing Roots, the files and theme organization
-* [Theme Wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) — Learn all about the theme wrapper
-* [Build Script](http://roots.io/using-grunt-for-wordpress-theme-development/) — A look into the Roots build script powered by Grunt
-* [Roots Sidebar](http://roots.io/the-roots-sidebar/) — Understand how to display or hide the sidebar in Roots
-
-## Features
-
-* Organized file and template structure
-* HTML5 Boilerplate's markup along with ARIA roles and microformat
-* Bootstrap
-* [Grunt build script](http://roots.io/using-grunt-for-wordpress-theme-development/)
-* [Theme activation](http://roots.io/roots-101/#theme-activation)
-* [Theme wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/)
-* Root relative URLs
-* Cleaner HTML output of navigation menus
-* Cleaner output of `wp_head` and enqueued scripts/styles
-* Nice search (`/search/query/`)
-* Image captions use `<figure>` and `<figcaption>`
-* Example vCard widget
-* Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
-* [Multilingual ready](http://roots.io/wpml/) (Brazilian Portuguese, Bulgarian, Catalan, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Korean, Macedonian, Norwegian, Polish, Russian, Simplified Chinese, Spanish, Swedish, Traditional Chinese, Turkish, Vietnamese, Serbian)
-
-## Contributing
-
-Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this project. There are several ways you can contribute:
-
-* Reporting issues (please read [issue guidelines](https://github.com/necolas/issue-guidelines))
-* Suggesting new features
-* Writing or refactoring code
-* Fixing [issues](https://github.com/roots/roots/issues)
-* Replying to questions on the [forum](http://discourse.roots.io/)
-
-## Support
-
-Use the [Roots Discourse](http://discourse.roots.io/) to ask questions and get support.
+Good luck!
