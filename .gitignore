@@ -1,2 +1,6 @@
 
 wp-config.php
+
+wp-config-local.php
+
+wp-config-remote.php

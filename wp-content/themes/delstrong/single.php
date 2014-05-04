@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'content', 'single' ); ?>
 
-	<?php delstrong_post_nav(); ?>
+	<?php //delstrong_post_nav(); ?>
 
 
 <?php endwhile; // end of the loop. ?>
