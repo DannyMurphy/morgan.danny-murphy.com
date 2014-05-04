@@ -6,8 +6,8 @@
 
 
 <article id="post-<?php the_ID(); ?>" class="list">
-	
-	<h2 class="list__title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+	<small><?php the_date(); ?></small>
+	<h2 class="list__title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a> </h2>
 	
 	<div class="list__description"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'delstrong' ) ); ?></div>
 	

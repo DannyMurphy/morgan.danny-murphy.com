@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);
+/*@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);*/
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:600);
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
@@ -20,7 +21,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Istok Web', 'sans-serif';
+  font-family: 'Josefin Sans', 'sans-serif';
 }
 
 /* HTML5 display definitions
@@ -432,6 +433,12 @@ th {
 /* DelStrong
    ========================================================================== */
 
+/*html,
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(35,31,32);
+}*/
 
 
 .masthead {
@@ -443,22 +450,55 @@ th {
   text-decoration: none;
   color: white;
 }
+.masthead__admin {
+  text-decoration: none;
+  color: white;
+  float: right;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  font-size: 0.8em;
+  padding: 0.6em;
+  margin-top: -0.4em; 
+}
 
 
 .list {
-  border: 1px solid rgb(200,200,200);
+  z-index: 1;
+  border: 1px solid red;
   padding: 1em;
   margin: 1em;
 }   
+.list p.test {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  color: white;
+  text-align: right;
+  padding: 0.5em;
+  background: rgba(0,0,0,0.7);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
 
 .entry {
+  
 
+}
+.entry__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: green;
+  z-index: -1;
 }
 .entry__title {
   font-weight: normal;
-  font-size: 2.1em;
+  font-size: 3.8em;
   color: white;
-  padding: 10px;
+  padding: 10px 40px;
   background: rgba(0,0,0,0.3);
   border-top: 1px solid rgba(255,255,255,0.7);
   border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -468,9 +508,9 @@ th {
 
 .entry__description {
   font-weight: normal;
-  font-size: 1.6em;
+  font-size: 2.4em;
   color: white;
-  padding: 10px;
+  padding: 10px 40px;
   background: rgba(0,0,0,0.3);
   border-top: 1px solid rgba(255,255,255,0.7);
   border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -481,9 +521,64 @@ th {
   margin: 0;
   padding: 0;
 }
+.header {
+  z-index: 99;
+  background: rgb(35,31,32);
+}
+.header__image {
+  width: 100%;
+  height: auto;
+}
+.footer {
+  z-index: 99;
+  padding: 0;
+  margin: 0;
+}
+.footer__group {
+  background: rgb(35,31,32);
+  overflow: hidden;
+}
+.footer__details {
+  width: 38%;
+  float: left;
+  color: white;
+  font-size: 1.4em;
+  padding-left: 1em; 
+  padding-top: 0.5em;
+}
+.footer__books {
+  width: 56%;
+  float: right;
+  
+}
+.footer__image {
+  width: 100%;
+  height: auto;
+}
+.page {
+  /*height: 297mm;*/
+  
+  /*position: relative;*/
+}
 
+@page {
+  size: A4 portrait;
+  margin: 0;
+  padding: 0;
+}
 @media print {
+  body, html { height:100% }
   .masthead {
     display: none;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

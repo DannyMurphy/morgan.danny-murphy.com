@@ -15,14 +15,23 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 
-<link rel='stylesheet' id='delstrong-style-css'  href='http://morgan.danny-murphy.com/wp-content/themes/delstrong/style.css?ver=3.9' type='text/css' media='all' />
+<link rel='stylesheet' id='delstrong-style-css'  href='<?php echo get_bloginfo('template_directory');?>/style.css?ver=3.9' type='text/css' media='all' />
 
 </head>
 
 <body>
-
 <div class="masthead">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="masthead__title">
 		<?php bloginfo( 'name' ); ?>
 	</a>
+	<a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>" class="masthead__admin"><?php
+		if ( $user_ID ) {
+			// user is logged in
+			print 'Admin';
+		} else {
+			// user is not logged in
+			print 'Login';
+		}
+	?></a>
 </div>
+
